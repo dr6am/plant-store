@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap');
+header{
+    background: rgba(255, 255, 255, 0.884);
+    height: 5vmax;
+    display: flex;
+    align-items: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: fixed;
+    top: 0;
+    width: 80vw;
+    z-index: 10;
+    box-shadow: 0 0 15px #00000094;
+    justify-content: space-between;
+    .logo{
+        font-family: 'Ubuntu', sans-serif;  
+        text-decoration: none;
+        color:#444444;
+        font-size: 3vmax;
+    }
+    .title{
+        display: flex;
+    }
+    .title p {
+        color: #333;
+        font-family: 'Ubuntu', sans-serif;  
+        font-weight: 500;
+        font-size: .9vmax;
+        text-transform: uppercase;
+        margin-top: auto;
+        margin-bottom: .1vmax;
+    }
+    .navigation-menu ul{
+        display: flex;
+        list-style-type: none;
+    }
+    li{
+        margin-right: 1vw;
+        font-weight: 300;
+        font-size: 1.1vmax;
+    }
+    li a{
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+        &:hover{
+            color:#000;
+        }
+    }
+}
+#header-space{
+    min-height: 5vmax;
+    visibility: hidden;
+}

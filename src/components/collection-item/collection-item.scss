@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,600,600i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+.collection-item {
+    width: fit-content;
+    display: block;
+    padding: 0;
+    height: fit-content;
+    align-items: center;
+    padding: .5vmax;
+    transition: all ease .2s;
+    .image {
+      background: no-repeat center;
+      width: 12vmax;
+      height: 15vmax;
+      margin-bottom: 1vh;
+    }
+  
+    .collection-footer {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1vmax;
+  
+      .name {
+        font-family: 'Ubuntu', sans-serif;  
+        width: 90%;
+        margin-bottom: 15px;
+      }
+      .price{
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        height: 1.5vmax;
+      }
+      
+    }
+    &:hover {
+      box-shadow: 0 0 10px #0000005e;
+      z-index: 5;
+    }
+  }
+  
