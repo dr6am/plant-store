@@ -18,7 +18,7 @@ class SignIn extends React.Component{
     }
     render(){
         return(
-            <div className="sign-in">
+            <div className="sign-in wrap">
                 <h2> I already have an account</h2>
                 <span>Sign in with your email and password</span>
 
@@ -38,8 +38,11 @@ class SignIn extends React.Component{
                     onChange={this.handleChange} required/>
                     <label htmlFor="password" className="form-input-label">Password</label>
                     </div>
-                    <CustomBtn type="submin">Login</CustomBtn>
-                    <CustomBtn onClick={(e)=>signInWithGoogle()}>sign in with google</CustomBtn>
+                    <div className="buttons">
+                        <CustomBtn type="submin">Login</CustomBtn>
+                        <CustomBtn isGoogleSign onClick={e=>signInWithGoogle()}>sign in with google</CustomBtn>
+                    </div>
+
                 </form>
             </div>
         )
