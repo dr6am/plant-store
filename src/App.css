@@ -6,3 +6,9 @@
     margin-left: auto;
     margin-right: auto;
 }
+.flex{
+    display: flex;
+} 
+.jc-between{
+justify-content: space-between;
+}

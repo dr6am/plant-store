@@ -1,28 +1,15 @@
 $sub-color: rgba(0, 0, 0, 0.836);
 $main-color: grey;
-body{
-    background: #fff;
-}
+
 @mixin shrinkLabel {
   top: -1vmax;
   font-size: .8vmax;
   color: $main-color;
 }
-.sign-in, .sign-up{
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width:600px){
-      width: 90vw;
-    }
-    .title{
-        margin-top: 1vmax;
-    }
-}
+
 .group {
   position: relative;
   margin: 1vmax 0;
-  
 
   .form-input {
     background: none;
@@ -31,6 +18,7 @@ body{
     font-size: 1vmax;
     padding: .5vmax .5vmax .5vmax .2vmax;
     display: block;
+    font-weight: bold;
     width: 100%;
     border: none;
     border-radius: 0;
@@ -43,11 +31,9 @@ body{
     &:focus {
       outline: none;
     }
-    &.focused{
-        @include shrinkLabel();
-      }
+
     &:focus ~ .form-input-label {
-        @include shrinkLabel();
+      @include shrinkLabel();
     }
   }
 
@@ -58,7 +44,7 @@ body{
   .form-input-label {
     color: $sub-color;
     font-size: 1vmax;
-    font-weight: normal;
+    font-weight: bold;
     position: absolute;
     pointer-events: none;
     left: 5px;
@@ -69,8 +55,4 @@ body{
       @include shrinkLabel();
     }
   }
-}
-.buttons{
-  display: flex;
-  justify-content: space-between;
 }
