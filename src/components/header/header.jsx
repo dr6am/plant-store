@@ -1,10 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {auth} from './../../firebase/firebase.util';
+import { Link } from 'react-router-dom';
+import { auth } from './../../firebase/firebase.util';
 import { connect } from 'react-redux';
+import CartIcon from './../cart-icon/cart-icon';
+import CartDropdown from './../cart-dropdown/cart-dropdown'
 import './header.scss';
 
-const Header = ({currentUser})=>
+const Header = ({currentUser, hidden})=>
     <React.Fragment>
     <header>
         <div className="title">
@@ -21,14 +23,18 @@ const Header = ({currentUser})=>
                         <div className="option" onClick={(e)=>{e &&e.preventDefault(); auth.signOut()}}>sign out</div>:
                         <Link to="/login">sign in</Link>
                     }</li>
+                    <li><CartIcon/></li>
                 </ul>
+                {hidden && (<CartDropdown/>)}
             </nav>
+
     </header>
     <div id="header-space"></div>
     </React.Fragment>
 
 
-const mapStateToProps= state=>({
-    currentUser: state.user.currentUser
+const mapStateToProps= ({user:{currentUser},cart:{hidden}})=>({
+    currentUser,
+    hidden
 })
 export default connect(mapStateToProps)(Header);

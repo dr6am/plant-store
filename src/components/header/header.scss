@@ -41,8 +41,11 @@ header{
         margin-right: 1vw;
         font-weight: 300;
         font-size: 1.1vmax;
+        align-items: center;
+        display: flex;
     }
     li a{
+        
         text-decoration: none;
         color: #333;
         font-weight: 400;
