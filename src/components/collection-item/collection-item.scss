@@ -7,14 +7,36 @@
     height: fit-content;
     align-items: center;
     padding: .5vmax;
-    transition: all ease .2s;
+    transition: all ease 1s;
+    position: relative;
     .image {
+      transition: all ease .5s;
       background: no-repeat center;
       width: 12vmax;
       height: 15vmax;
       margin-bottom: 1vh;
     }
-  
+    .custom-button{
+      position: absolute;
+      width: 80%;
+      opacity: .7;
+      top:65%; 
+      left: 10%;
+      display: none;
+      transition: all ease .4s;
+      border-radius: .1vmax;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    &:hover{ 
+      .custom-button{
+        display: block;      
+      }
+      .image{
+        opacity: .8;
+      }
+  }
     .collection-footer {
       width: 100%;
       height: fit-content;

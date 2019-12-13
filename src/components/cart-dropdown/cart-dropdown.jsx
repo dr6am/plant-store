@@ -7,7 +7,7 @@ const CartDropdown =()=>(
     <div className="cart-dropdown">
         <div className="cart-items">
         </div>
-        <CustomBtn>Go To CheckOut</CustomBtn>
+        <CustomBtn >Go To CheckOut</CustomBtn>
     </div>
 )
 export default CartDropdown;

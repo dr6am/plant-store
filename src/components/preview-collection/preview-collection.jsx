@@ -13,12 +13,12 @@ const PreviewCollection =({title,items,titleVis})=>//
                     
                     {
                         titleVis && items.filter((item,idx)=> idx<5).map((item)=>(
-                            <CollectionItem key={item.id} id={item.id} name={item.name} price={item.price} imageUrl={item.imageUrl} />
+                            <CollectionItem key={item.id} id={item.id} item={item} />
                         )) 
                     }
                     { !titleVis &&
                         items.map((item)=>(
-                            <CollectionItem key={item.id} id={item.id} name={item.name} price={item.price} imageUrl={item.imageUrl} />
+                            <CollectionItem key={item.id} id={item.id} item={item} />
                         )) 
                     }
                 </div>

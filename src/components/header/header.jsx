@@ -25,7 +25,7 @@ const Header = ({currentUser, hidden})=>
                     }</li>
                     <li><CartIcon/></li>
                 </ul>
-                {hidden && (<CartDropdown/>)}
+                {!hidden && (<CartDropdown/>)}
             </nav>
 
     </header>
