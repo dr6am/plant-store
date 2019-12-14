@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/plant-store/static/css/main.abf5a090.chunk.css",
+    "main.js": "/plant-store/static/js/main.05664916.chunk.js",
+    "main.js.map": "/plant-store/static/js/main.05664916.chunk.js.map",
+    "runtime-main.js": "/plant-store/static/js/runtime-main.aefa9ddd.js",
+    "runtime-main.js.map": "/plant-store/static/js/runtime-main.aefa9ddd.js.map",
+    "static/js/2.b4505408.chunk.js": "/plant-store/static/js/2.b4505408.chunk.js",
+    "static/js/2.b4505408.chunk.js.map": "/plant-store/static/js/2.b4505408.chunk.js.map",
+    "index.html": "/plant-store/index.html",
+    "precache-manifest.0f720d75361fadf6927ffc0bc633f900.js": "/plant-store/precache-manifest.0f720d75361fadf6927ffc0bc633f900.js",
+    "service-worker.js": "/plant-store/service-worker.js",
+    "static/css/main.abf5a090.chunk.css.map": "/plant-store/static/css/main.abf5a090.chunk.css.map",
+    "static/js/2.b4505408.chunk.js.LICENSE": "/plant-store/static/js/2.b4505408.chunk.js.LICENSE",
+    "static/media/shopping-bag.30f07071.svg": "/plant-store/static/media/shopping-bag.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aefa9ddd.js",
+    "static/js/2.b4505408.chunk.js",
+    "static/css/main.abf5a090.chunk.css",
+    "static/js/main.05664916.chunk.js"
+  ]
+}
