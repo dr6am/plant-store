@@ -1,23 +1,29 @@
 .cart-dropdown {
     position: absolute;
-    width: 240px;
-    height: 340px;
+    width: 15vmax;
+    height: 20vmax;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 1vmax;
     border: 1px solid black;
     background-color: white;
-    top: 90px;
-    right: 40px;
+    top:4.9vmax;
+    right: 5vw;
     z-index: 5;
-    transition: .3s all ease;
+    
+    transition: .5s all ease;
     .cart-items {
-      height: 240px;
       display: flex;
       flex-direction: column;
-      overflow: scroll;
+      overflow-y: scroll;
+      margin-bottom: .8vmax;
     }
-  
+    .empty-message{
+      font-family: 'Ubuntu', sans-serif;  
+        font-weight: 300;
+        margin: auto;
+        font-size: .8vmax;
+    }
     button {
       margin-top: auto;
     }

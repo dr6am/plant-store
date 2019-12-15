@@ -1,11 +1,12 @@
 .custom-button {
-    min-width: 165px;
+    min-width: 1vmax;
     width: auto;
-    height: 50px;
+    height: auto;
     letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 15px;
+    line-height: 1vmax;
+    padding-top: 1.2vmax;
+    padding-bottom: 1.2vmax;
+    font-size: 1vmax;
     background-color: black;
     color: white;
     text-transform: uppercase;
