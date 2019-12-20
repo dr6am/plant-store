@@ -1,0 +1,20 @@
+.collection-page {
+    display: flex;
+    flex-direction: column;  
+    width: 65vw;
+    .title {
+      font-size: 1.5vmax;
+      margin: 0 auto 1vmax;
+    }
+  
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap:0px;
+  
+      & .collection-item {
+        margin-bottom: 1vmax;
+      }
+    }
+  }
+  
