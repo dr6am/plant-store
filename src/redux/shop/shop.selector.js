@@ -7,13 +7,15 @@ export const selectCollections = createSelector(
     [selectShop],
     shop=> shop.collections
 )
+
 export const selectCollection = collectionUrlParam=>createSelector(
     [selectCollections],
-    collections=>
-        collections[collectionUrlParam]
+    collections=>(collections?
+        collections[collectionUrlParam]:null)
 )
-//Collection
+
 export const selectCollectionsOverview = createSelector(
     [selectCollections],
-    shop=> Object.keys(shop).map(key=>shop[key])
+    shop=> shop ? Object.keys(shop).map(key=>shop[key]) : []
 )
+

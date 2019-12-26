@@ -38,7 +38,6 @@ const INITIALE_STATE = {
 const directoryReducer =(state=INITIALE_STATE, action)=> {
     switch(action.type){
         default:
-            console.log(typeof state)
             return state;
     }
 }
