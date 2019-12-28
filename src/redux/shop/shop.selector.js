@@ -18,4 +18,12 @@ export const selectCollectionsOverview = createSelector(
     [selectCollections],
     shop=> shop ? Object.keys(shop).map(key=>shop[key]) : []
 )
+export const selectIsCollectionFetching = createSelector(
+    [selectShop],
+    shop=>shop.isFetching
+)
 
+export const selectIsCollectionLoaded = createSelector(
+    [selectShop],
+    shop=> !!shop.collections
+)

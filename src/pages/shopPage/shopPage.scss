@@ -1,8 +1,7 @@
 .shop-page{
-  margin-top: 5vmax;
   width:79vw;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5vmax auto;
+  justify-content: center;
   & h1{
     font-family: 'Ubuntu', sans-serif;  
     color:#000000c0;
