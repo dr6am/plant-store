@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 import { auth } from './../../firebase/firebase.util';
 import { connect } from 'react-redux';
 import {createStructuredSelector} from 'reselect';
-import { selectCartHidden }from '../../redux/cart/cart.selectors'
-import { selectCurrentUser } from '../../redux/user/user.selectors';
 import CartIcon from './../cart-icon/cart-icon';
 import CartDropdown from './../cart-dropdown/cart-dropdown'
 import './header.scss';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { signOutStart } from '../../redux/user/user.actions';
 
-const Header = ({currentUser, hidden})=>
+const Header = ({currentUser, hidden,signOutStart})=>
     <React.Fragment>
     <header>
         <div className="title">
             <Link to="/" className="logo">Logo</Link>
-            {/*<p>{typeof subTitle === 'string'  && subTitle}</p>*/}
+            
         </div>
         
         <nav className="navigation-menu">
@@ -23,7 +24,7 @@ const Header = ({currentUser, hidden})=>
                     <li><Link to="/contact">contact</Link></li>
                     <li>{
                         currentUser ?
-                        <div className="option" onClick={(e)=>{e &&e.preventDefault(); auth.signOut()}}>sign out</div>:
+                        <div className="option" onClick={signOutStart}>sign out</div>:
                         <Link to="/login">sign in</Link>
                     }</li>
                     <li><CartIcon/></li>
@@ -36,8 +37,16 @@ const Header = ({currentUser, hidden})=>
     </React.Fragment>
 
 
-const mapStateToProps= createStructuredSelector({
+const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
-    hidden:selectCartHidden  
-})
-export default connect(mapStateToProps)(Header);
+    hidden: selectCartHidden
+});
+
+const mapDispatchToProps = dispatch => ({
+    signOutStart: () => dispatch(signOutStart())
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header);
