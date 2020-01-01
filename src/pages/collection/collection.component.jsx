@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import CollectionItem from '../../components/collection-item/collection-item';
 import './collection.scss';
 import { selectCollection } from '../../redux/shop/shop.selector';
-import {firestore} from "../../firebase/firebase.util";
+
 
 const CollectionPage = ({collection})=>{
     

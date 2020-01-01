@@ -1,6 +1,17 @@
+
 .loginPage{
     display: flex;
     justify-content: space-between;
     width: 70vw;
-    margin: auto;
+    margin: 5vh auto;
+    padding: 1vmax;
+    border-radius: .5vmax;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.41);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    @media screen and (max-width: 1000px){
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 812px){
+    .loginPage{display: block;}
 }

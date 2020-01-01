@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,600,600i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 .collection-item {
     width: fit-content;
     display: block;
@@ -20,7 +20,8 @@
       position: absolute;
       width: 80%;
       opacity: .7;
-      top:65%; 
+      font-size: 1vmax;
+      bottom:0;
       left: 10%;
       display: none;
       transition: all ease .4s;
@@ -45,8 +46,9 @@
       font-size: 1vmax;
   
       .name {
-        font-family: 'Ubuntu', sans-serif;  
+        font-family: 'Lato', sans-serif;
         width: 90%;
+
         margin-bottom: 15px;
       }
       .price{

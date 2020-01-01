@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.util';
 import CustomBtn from './../custom-btn/custom-btn'
 import './signUp.scss';
 import FormInput from './../form-input/form-input';
@@ -28,8 +27,8 @@ const SignUp =({signUpStart})=> {
     }
     const {displayName,email,password,confrimPassword} = state;
     return(<div className="sign-up">
-            <h2> I do not have an account</h2>
-            <span>Sign up with your email and password</span>
+            <h2 className={"title"}> I do not have an account</h2>
+            <span className={"subtitle"}>Sign up with your email and password</span>
             
             <form onSubmit={handleSubmit}>
                 <div className="group">
@@ -38,7 +37,7 @@ const SignUp =({signUpStart})=> {
                         name='displayName'
                         value={displayName}
                         onChange={handleChange}
-                        label='Ur name'
+                        label='Your name'
                         required
                     />
                     <FormInput

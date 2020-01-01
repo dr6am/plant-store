@@ -1,75 +1,40 @@
-$sub-color: rgba(0, 0, 0, 0.836);
-$main-color: grey;
-body{
-    background: #fff;
-}
-@mixin shrinkLabel {
-  top: -1vmax;
-  font-size: .8vmax;
-  color: $main-color;
-}
+
+
 .sign-in, .sign-up{
     width: 20vw;
     display: flex;
     flex-direction: column;
-    @media screen and (max-width:600px){
-      width: 90vw;
-    }
+    font-family: Roboto, sans-serif;
     .title{
-        margin-top: 1vmax;
+       margin-top: 1vmax;
+       font-weight: 700;
     }
+    span{
+      font-weight: 500;
+      padding-left: 1em;
+      font-size: 1em;
+      color:#4a4a4a;
+    }
+    form{
+      margin-top: 1vmax;
+    }
+
 }
-.group {
-  position: relative;
-  margin: 1vmax 0;
-  
+@media screen and (max-width: 1110px){
 
-  .form-input {
-    background: none;
-    background-color: white;
-    color: $sub-color;
-    font-size: 1vmax;
-    padding: .5vmax .5vmax .5vmax .2vmax;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid $sub-color;
-    margin: 25px 0;
-    height: 2.5vmax;
-    @media screen and (max-width:600px){
-      height: 5vh;
-    }
-    &:focus {
-      outline: none;
-    }
-    &.focused{
-        @include shrinkLabel();
-      }
-    &:focus ~ .form-input-label {
-        @include shrinkLabel();
-    }
-  }
-
-  input[type='password'] {
-    letter-spacing: 0.3em;
-  }
-
-  .form-input-label {
-    color: $sub-color;
-    font-size: 1vmax;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 300ms ease all;
-
-    &.shrink {
-      @include shrinkLabel();
-    }
+  .sign-in, .sign-up{width: 30vw;}
+  form{
+    width: 30vw;
   }
 }
+@media screen and (max-width: 813px){
+  .sign-in, .sign-up{width: 90vw;}
+  form{
+    width: 80vw;
+    margin: auto;
+  }
+}
+
 .buttons{
   display: flex;
   justify-content: space-between;

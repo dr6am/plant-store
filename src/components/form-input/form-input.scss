@@ -2,36 +2,38 @@ $sub-color: rgba(0, 0, 0, 0.836);
 $main-color: grey;
 
 @mixin shrinkLabel {
-  top: -1vmax;
-  font-size: .8vmax;
+  bottom: 0;
+  transform: translateY(-3vh);
+  font-size: .8em;
   color: $main-color;
+  @media screen and (max-width: 812px){
+    font-size: .6em;
+    transform: translateY(-5vh);
+  }
 }
 
 .group {
   position: relative;
   margin: 1vmax 0;
-
   .form-input {
     background: none;
-    background-color: white;
     color: $sub-color;
-    font-size: 1vmax;
+    font-size: 1em;
     padding: .5vmax .5vmax .5vmax .2vmax;
     display: block;
     font-weight: bold;
     width: 100%;
     border: none;
-    border-radius: 0;
     border-bottom: 1px solid $sub-color;
     margin: 25px 0;
     height: 2.5vmax;
-    @media screen and (max-width:600px){
-      height: 5vh;
-    }
+    border-radius: 2px;
     &:focus {
       outline: none;
     }
-
+    @media screen and (max-width: 812px){
+      height: 5vmax;
+    }
     &:focus ~ .form-input-label {
       @include shrinkLabel();
     }
@@ -43,12 +45,12 @@ $main-color: grey;
 
   .form-input-label {
     color: $sub-color;
-    font-size: 1vmax;
+    font-size: 1.2em;
     font-weight: bold;
     position: absolute;
     pointer-events: none;
     left: 5px;
-    top: 10px;
+    bottom: .1vmax;
     transition: 300ms ease all;
 
     &.shrink {

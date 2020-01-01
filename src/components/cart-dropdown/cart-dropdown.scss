@@ -10,8 +10,14 @@
     top:4.9vmax;
     right: 5vw;
     z-index: 5;
-    
     transition: .5s all ease;
+    @media screen and (max-width: 813px){
+      width: 100vw;
+      height: 92vh;
+      position: fixed;
+      top: 8vh;
+      left:0;
+    }
     .cart-items {
       display: flex;
       flex-direction: column;
@@ -19,10 +25,14 @@
       margin-bottom: .8vmax;
     }
     .empty-message{
-      font-family: 'Ubuntu', sans-serif;  
-        font-weight: 300;
-        margin: auto;
-        font-size: .8vmax;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      margin: auto;
+      font-size: 1vmax;
+
+      @media screen and (max-width: 813px){
+        font-size: 2vmax;
+      }
     }
     button {
       margin-top: auto;

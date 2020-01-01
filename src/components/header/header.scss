@@ -12,8 +12,11 @@ header{
     z-index: 10;
     box-shadow: 0 0 15px #00000094;
     justify-content: space-between;
+    @media screen and (max-width: 813px) {
+        height: 8vmax;
+    }
     .logo{
-        font-family: 'Ubuntu', sans-serif;  
+        font-family: 'Roboto', sans-serif;
         text-decoration: none;
         color:#444444;
         font-size: 3vmax;
@@ -38,14 +41,22 @@ header{
         list-style-type: none;
     }
     li{
-        margin-right: 1vw;
+        font-size: 1.2rem;
+        margin-right: 1em;
         font-weight: 300;
-        font-size: 1.1vmax;
         align-items: center;
         display: flex;
+        @media screen and (max-width: 813px){
+            &{
+
+            }
+            &:last-of-type{
+                margin: 0;
+            }
+        }
     }
     li a{
-        
+        min-width: 56px;
         text-decoration: none;
         color: #333;
         font-weight: 400;
@@ -57,4 +68,7 @@ header{
 #header-space{
     min-height: 5vmax;
     visibility: hidden;
+    @media screen and (max-width: 813px) {
+        min-height: 8vmax;
+    }
 }
