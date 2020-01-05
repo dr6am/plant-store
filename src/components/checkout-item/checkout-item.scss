@@ -5,7 +5,7 @@
     min-height: 100px;
     border-bottom: .1vmax solid darkgrey;
     padding: .4vmax 0;
-    font-size: 1vmax;
+    font-size: 1.5vmax;
     align-items: center;
     transition: all ease-out .5s;
     .img-containter {
@@ -27,7 +27,6 @@
       padding-left: .5vmax;
       align-items: center;
       display: flex;
-
       .arrow {
           cursor: pointer;
       }

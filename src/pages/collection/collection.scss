@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;  
     width: 65vw;
+  @media screen and (max-width: 813px){
+    width: max-content;
+  }
     .title {
+      @media screen and (max-width: 813px){
+        font-size: 3vmax;
+      }
+
       font-size: 1.5vmax;
       margin: 0 auto 1vmax;
     }
@@ -11,7 +18,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap:0px;
-  
+      @media screen and (max-width: 813px){
+        grid-template-columns: 1fr 1fr ;
+      }
       & .collection-item {
         margin-bottom: 1vmax;
       }

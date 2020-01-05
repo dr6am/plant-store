@@ -19,7 +19,11 @@
       justify-content: center;
       padding: .3vmax .4vmax;
       .name {
+        padding-left: 2vw;
         font-size: .8vmax;
+        @media screen and (max-width: 813px){
+            font-size: 4vw;
+        }
       }
     }
   }

@@ -2,6 +2,9 @@
   width:79vw;
   margin: 5vmax auto;
   justify-content: center;
+  @media screen and (max-width: 813px){
+    width: 100vw;
+  }
   & h1{
     font-family: 'Ubuntu', sans-serif;  
     color:#000000c0;

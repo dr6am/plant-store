@@ -1,51 +1,48 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {createStructuredSelector} from 'reselect';
 import CartIcon from './../cart-icon/cart-icon';
 import CartDropdown from './../cart-dropdown/cart-dropdown'
 import './header.scss';
-import {selectCartHidden} from '../../redux/cart/cart.selectors';
-import {selectCurrentUser} from '../../redux/user/user.selectors';
-import {signOutStart} from '../../redux/user/user.actions';
 
-const Header = ({currentUser, hidden, signOutStart}) =>
-	<React.Fragment>
-		<header>
-			<div className="title">
-				<Link to="/" className="logo">Logo</Link>
+
+import {CartContext} from "../../providers/cart/cart.provider";
+import CurrentUserContext from "../../contexts/current-user/current-user.context";
+import {auth} from "../../firebase/firebase.util";
+
+
+const Header = () => {
+	const currentUser = useContext(CurrentUserContext);
+	const {hidden} = useContext(CartContext);
+	return (
+		<React.Fragment>
+			<header>
+				<div className="title">
+					<Link to="/" className="logo">Logo</Link>
+					
+				</div>
+				
+				<nav className="navigation-m enu">
+					<ul>
+						
+						<li><Link to="/shop/mens">Men</Link></li>
+						<li><Link to="/shop/womens">Women</Link></li>
+						
+						<li>{
+							currentUser ?
+								<div className="option" onClick={() => auth.signOut()}>Sign out</div> :
+								<Link to="/login">Sign in</Link>
+						}</li>
+						<li>
+							<CartIcon/>
+						</li>
+					</ul>
+					{!hidden && (<CartDropdown/>)}
+				</nav>
 			
-			</div>
-			
-			<nav className="navigation-menu">
-				<ul>
-					<li><Link to="/shop">shop</Link></li>
-					<li><Link to="/contact">contact</Link></li>
-					<li>{
-						currentUser ?
-							<div className="option" onClick={signOutStart}>sign out</div> :
-							<Link to="/login">sign in</Link>
-					}</li>
-					<li><CartIcon/></li>
-				</ul>
-				{!hidden && (<CartDropdown/>)}
-			</nav>
-		
-		</header>
-		<div id="header-space"></div>
-	</React.Fragment>;
+			</header>
+			<div id="header-space"/>
+		</React.Fragment>)
+};
 
 
-const mapStateToProps = createStructuredSelector({
-	currentUser: selectCurrentUser,
-	hidden: selectCartHidden
-});
-
-const mapDispatchToProps = dispatch => ({
-	signOutStart: () => dispatch(signOutStart())
-});
-
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(Header);
+export default Header;

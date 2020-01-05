@@ -1,33 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,600,600i&display=swap');
 
 .collection-item {
-    width: fit-content;
     display: block;
-    padding: 0;
-    height: fit-content;
+    height: max-content;
+    width: 12vmax;
     align-items: center;
     padding: .5vmax;
     transition: all ease 1s;
     position: relative;
+    @media screen and (max-width: 813px){
+      width: 40vw;
+      height: max-content;
+      font-size: 2vmax;
+    }
     .image {
       transition: all ease .5s;
-      background: no-repeat center;
-      width: 12vmax;
+      background: no-repeat center 0;
+      background-size: cover;
       height: 15vmax;
       margin-bottom: 1vh;
+      @media screen and (max-width: 813px){
+        height: 25vmax;
+      }
     }
     .custom-button{
       position: absolute;
       width: 80%;
       opacity: .7;
-      font-size: 1vmax;
-      bottom:0;
+      font-size: 1em;
+      top:13vmax;
       left: 10%;
       display: none;
       transition: all ease .4s;
-      border-radius: .1vmax;
+
       &:hover{
         opacity: 1;
+      }
+      @media screen and (max-width: 813px){
+        font-size: .7em;
+        position: relative;
+        top:0;
+        left: 0;
+        opacity: 1;
+        display: block;
       }
     }
     &:hover{ 
@@ -40,15 +55,14 @@
   }
     .collection-footer {
       width: 100%;
-      height: fit-content;
+      height: min-content;
       display: flex;
       justify-content: space-between;
-      font-size: 1vmax;
+      font-size: 1em;
   
       .name {
         font-family: 'Lato', sans-serif;
         width: 90%;
-
         margin-bottom: 15px;
       }
       .price{
@@ -57,10 +71,6 @@
         height: 1.5vmax;
       }
       
-    }
-    &:hover {
-      box-shadow: 0 0 10px #0000005e;
-      z-index: 5;
     }
   }
   

@@ -5,14 +5,20 @@
     flex-direction: column;
     align-items: center;
     margin: 2vmax auto 0;
-  
+    @media screen and (max-width: 813px){
+      width: 90vw
+    }
     .checkout-header {
       width: 100%;
       padding: .7vmax 0;
       display: flex;
       justify-content: space-between;
       border-bottom: .1vmax solid darkgrey;
-  
+      font-size: 1vmax;
+      @media screen and (max-width:813px ){
+        font-size: 1.5vmax;
+      }
+
       .header-block {
         text-transform: capitalize;
         width: 23%;
@@ -23,19 +29,30 @@
       }
     }
     .test-card{
-      
       text-align: center;
       margin-top: 1vmax;
-      font-size: .7vmax;
+      margin-bottom: 1vmax;
+      font-size: 1.2vmax;
       color:grey;
     }
     button{
       margin-left: auto ;
     }
+    .collection-footer .name{
+      font-size: 1.5vmax;
+    }
     .total {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
       margin-top: 30px;
       margin-left: auto;
-      font-size: 36px;
+      font-size: 1vmax;
+      justify-content: space-between;
+      color: #333333;
+    }
+    .total-text{
+      text-transform: uppercase;
     }
   }
   
