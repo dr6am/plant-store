@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/buildOld')));
 
 if (process.env.NODE_ENV === "production") {
 
@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 app.get('/*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+	res.sendFile(path.join(__dirname, 'client/buildOld', 'index.html'));
 })
 app.post('/payment', (req, res) => {
 	const body = {
